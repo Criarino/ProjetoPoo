@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package projetopoo;
-
-import java.util.Date;
 import java.util.Scanner;
 
 /**
