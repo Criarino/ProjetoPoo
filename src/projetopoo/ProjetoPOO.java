@@ -12,7 +12,7 @@ public class ProjetoPOO
         Material aux;
         while(true) //interface com usuário
         {
-            System.out.println("Digite 1 para adicionar, editar ou excluir um Material\nDigite 2 para pesquisar um Material\nDigite 0 para sair\n");
+            System.out.println("Digite 1 para adicionar, editar ou excluir um Material\nDigite 2 para pesquisar um Material\nDigite 3 para ver extratos de vendas\nDigite 0 para sair\n");
             res=s1.nextInt();
             switch (res)
             {
@@ -26,11 +26,14 @@ public class ProjetoPOO
                     if (aux!=null) //quando o material não é encontrado ou dá erro, retorna null. Só deve imprimir quando o retorno é diferente de null
                         System.out.println(aux);
                     break;
+                case 3:
+                    System.out.println("Informe o código da venda: ");
+                    res=s1.nextInt();
+                    System.out.println(i1.vendas[res-1]);
+                    i1.vendas[res-1].ImpMateriais();
+                    break;
             }
         }
-        /*Calendar atual=Calendar.getInstance();
-        Venda v=new Venda(01,atual.getTime(),100.0);
-        System.out.println(v);*/
     }
     
 }

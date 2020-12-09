@@ -36,7 +36,7 @@ public class Busca //classe para fazer a busca nos vetores
             }
         }
         
-        System.out.println("Não encontrado");
+        System.out.println("Não encontrado");//caso não encontre
         return null;
         }
         catch(NullPointerException e)//quando o vetor está vazio, joga essa exceção

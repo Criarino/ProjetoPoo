@@ -8,18 +8,28 @@ public class Venda
     private final Date data;
     private final double valor;
     DateFormat fd;
-    private Material Materiais[];
-    public Venda(int i, Date d, double v)//construtor
+    private final Material Materiais[];
+    private final String cliente;
+    public Venda(int i, Date d, double v, String client, Material[] m)//construtor
     {
         id=i;
         data=d;
         valor=v;
         fd=DateFormat.getDateInstance();
-        //Materiais=m;
+        cliente=client;
+        Materiais=m;
     }
-    @Override
-    public String toString()
+    public void ImpMateriais () //imprime os materiais para fazer o extrato /!/DEVE SER CHAMADO DEPOIS DO TOSTRING
     {
-        return "\nID da venda= "+id+"\nData= "+fd.format(data)+"\nValor= "+valor;
+        int i=Materiais.length;
+        System.out.println("\nMateriais vendidos: ");
+        for (int ia=0;ia<=i;ia++)
+            System.out.println("\n"+Materiais[ia].getNome());
+    }
+
+    @Override
+    public String toString() //o tostring é usado para gerar extrato
+    {
+        return "\nID da venda= "+id+"\nCliente: "+cliente+"\nData= "+fd.format(data)+"\nValor= "+valor+"\n";
     }
 }
