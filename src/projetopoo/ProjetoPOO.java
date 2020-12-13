@@ -12,7 +12,12 @@ public class ProjetoPOO
         Material aux;
         while(true) //interface com usuário
         {
-            System.out.println("Digite 1 para adicionar, editar ou excluir um Material\nDigite 2 para pesquisar um Material\nDigite 3 para ver extratos de vendas\nDigite 0 para sair\n");
+            System.out.println("Digite 1 para adicionar, editar ou excluir um Material" +
+                    "\nDigite 2 para pesquisar um Material\nDigite 3 para ver extratos de vendas" +
+                    "\nDigite 4 para adicionar, editar ou excluir um Cliente" +
+                    "\nDigite 5 para adicionar, editar ou excluir um Colaborador" + 
+                    "\nDigite 6 para adicionar, editar ou excluir um Administrador" + 
+                    "\nDigite 0 para sair\n");
             res=s1.nextInt();
             switch (res)
             {
@@ -31,6 +36,15 @@ public class ProjetoPOO
                     res=s1.nextInt();
                     System.out.println(i1.vendas[res-1]);
                     i1.vendas[res-1].ImpMateriais();
+                    break;
+                case 4:
+                    i1.Interface();
+                    break;
+                case 5:
+                    i1.Interface();
+                    break;
+                case 6:
+                    i1.Interface();
                     break;
             }
         }
